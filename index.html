@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Keyword Position Checker</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.4/css/bulma.min.css">
+  <style>
+    body {
+      padding: 10px;
+      text-align: center;
+    }
+    h1 {
+      margin-bottom: 10px;
+    }
+    .form-group {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+    .form-group label {
+      margin-right: 10px;
+    }
+    input[type="text"], textarea {
+      width: 100%;
+      box-sizing: border-box;
+    }
+    textarea {
+      height: 60px;
+    }
+    table {
+      width: 100%;
+      margin-top: 10px;
+      border-collapse: collapse;
+    }
+    th, td {
+      padding: 5px;
+      text-align: left;
+      border: 1px solid #ccc;
+    }
+    td input[type="text"] {
+      width: calc(100% - 10px);
+      padding: 5px;
+      border: none;
+      box-sizing: border-box;
+      font-size: 12px;
+    }
+    button {
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1 class="title is-4">Keyword Position Checker</h1>
+  <main class="container">
+    <section>
+      <div class="field">
+        <label class="label" for="businessName">Business Name:</label>
+        <div class="control">
+          <input class="input" type="text" id="businessName" placeholder="Enter Business Name">
+        </div>
+      </div>
+      <div class="field">
+        <label class="label" for="keywordsTextarea">Paste Keywords (one per line):</label>
+        <div class="control">
+          <textarea class="textarea" id="keywordsTextarea" rows="3" placeholder="Paste keywords here, one per line"></textarea>
+        </div>
+      </div>
+      <div class="control">
+        <button class="button is-primary" id="populateKeywords">Populate Keywords</button>
+      </div>
+      <table class="table is-fullwidth is-bordered is-striped" role="grid">
+        <thead>
+          <tr>
+            <th>Keyword</th>
+            <th>Position</th>
+          </tr>
+        </thead>
+        <tbody id="keywordsTable">
+          <tr>
+            <td><input type="text" class="input keyword" placeholder="Keyword 1"></td>
+            <td class="position"></td>
+          </tr>
+          <tr>
+            <td><input type="text" class="input keyword" placeholder="Keyword 2"></td>
+            <td class="position"></td>
+          </tr>
+          <tr>
+            <td><input type="text" class="input keyword" placeholder="Keyword 3"></td>
+            <td class="position"></td>
+          </tr>
+          <tr>
+            <td><input type="text" class="input keyword" placeholder="Keyword 4"></td>
+            <td class="position"></td>
+          </tr>
+          <tr>
+            <td><input type="text" class="input keyword" placeholder="Keyword 5"></td>
+            <td class="position"></td>
+          </tr>
+          <tr>
+            <td><input type="text" class="input keyword" placeholder="Keyword 6"></td>
+            <td class="position"></td>
+          </tr>
+          <tr>
+            <td><input type="text" class="input keyword" placeholder="Keyword 7"></td>
+            <td class="position"></td>
+          </tr>
+          <tr>
+            <td><input type="text" class="input keyword" placeholder="Keyword 8"></td>
+            <td class="position"></td>
+          </tr>
+          <tr>
+            <td><input type="text" class="input keyword" placeholder="Keyword 9"></td>
+            <td class="position"></td>
+          </tr>
+          <tr>
+            <td><input type="text" class="input keyword" placeholder="Keyword 10"></td>
+            <td class="position"></td>
+          </tr>
+          <tr>
+            <td><input type="text" class="input keyword" placeholder="Keyword 11"></td>
+            <td class="position"></td>
+          </tr>
+          <tr>
+            <td><input type="text" class="input keyword" placeholder="Keyword 12"></td>
+            <td class="position"></td>
+          </tr>
+          <tr>
+            <td><input type="text" class="input keyword" placeholder="Keyword 13"></td>
+            <td class="position"></td>
+          </tr>
+          <tr>
+            <td><input type="text" class="input keyword" placeholder="Keyword 14"></td>
+            <td class="position"></td>
+          </tr>
+          <tr>
+            <td><input type="text" class="input keyword" placeholder="Keyword 15"></td>
+            <td class="position"></td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="control">
+        <button class="button is-link" id="runScript">Run Script</button>
+        <button class="button is-light" id="copyPositions">Copy Positions</button>
+      </div>
+    </section>
+  </main>
+  
+    </div>
+  </footer>
+  <script src="renderer.js"></script>
+</body>
+</html>
