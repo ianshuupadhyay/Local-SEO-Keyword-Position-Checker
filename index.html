@@ -22,7 +22,7 @@
     .form-group label {
       margin-right: 10px;
     }
-    input[type="text"], textarea {
+    input[type="text"], textarea, select {
       width: 100%;
       box-sizing: border-box;
     }
@@ -61,6 +61,23 @@
           <input class="input" type="text" id="businessName" placeholder="Enter Business Name">
         </div>
       </div>
+      
+      <div class="field">
+        <label class="label" for="countrySelect">Select Country:</label>
+        <div class="control">
+          <div class="select is-fullwidth">
+            <select id="countrySelect">
+              <option value="ca">Canada</option>
+              <option value="us">United States</option>
+              <option value="uk">United Kingdom/Ireland</option>
+              <option value="au">Australia</option>
+              <option value="sg">Singapore</option>
+              <option value="nz">New Zealand</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
       <div class="field">
         <label class="label" for="keywordsTextarea">Paste Keywords (one per line):</label>
         <div class="control">
@@ -144,11 +161,11 @@
         <button class="button is-link" id="runScript">Run Script</button>
         <button class="button is-light" id="copyPositions">Copy Positions</button>
       </div>
+      <div class="notification is-info is-light mt-3" style="display: none;" id="statusMessage">
+        Searching... Please wait.
+      </div>
     </section>
   </main>
-  
-    </div>
-  </footer>
   <script src="renderer.js"></script>
 </body>
 </html>
